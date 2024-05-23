@@ -298,8 +298,8 @@ function TalentProfile({ slug }: TalentProps) {
                     {isMD
                       ? talent?.username
                       : talent?.username?.length && talent?.username.length > 24
-                      ? `${talent?.username.slice(0, 24)}...`
-                      : talent?.username}
+                        ? `${talent?.username.slice(0, 24)}...`
+                        : talent?.username}
                   </Text>
                 </Box>
                 <Flex

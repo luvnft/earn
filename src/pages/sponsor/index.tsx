@@ -63,7 +63,7 @@ const Sponsor = () => {
   return (
     <>
       <Head>
-        <title>Find Top Talent for Your Crypto Projects on LUV NFT GIG</title>
+        <title>Find Top Talent for Your Crypto Projects on GIG</title>
         <meta
           name="description"
           content="Seeking top talent for your crypto project? LUV NFT GIG connects you with experts for Bounties, Projects, and Grants in the crypto space."

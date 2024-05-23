@@ -1,16 +1,13 @@
 import {
   Box,
-  chakra,
   Container,
   Flex,
   Image,
   Link,
   Stack,
   Text,
-  VisuallyHidden,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import type { ReactNode } from 'react';
 
 import { Superteams } from '@/constants/Superteam';
 import { getURL } from '@/utils/validUrl';
@@ -49,41 +46,6 @@ const superteamProductions = [
   },
 ];
 
-const SocialButton = ({
-  children,
-  label,
-  href,
-}: {
-  children: ReactNode;
-  label: string;
-  href: string;
-}) => {
-  return (
-    <chakra.button
-      bg={'blackAlpha.100'}
-      color="brand.slate.600"
-      rounded={'full'}
-      w={8}
-      h={8}
-      cursor={'pointer'}
-      as={'a'}
-      href={href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.3s ease'}
-      _hover={{
-        bg: 'blackAlpha.500',
-      }}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  );
-};
-
 export const Footer = () => {
   return (
     <Box
@@ -112,8 +74,7 @@ export const Footer = () => {
             </Box>
             <Text color="brand.slate.500" fontSize={{ base: 'sm', md: 'md' }}>
               LUV NFT GIG allows crypto friendly companies to connect with
-              exceptional worldwide crypto talent and accelerate your project's
-              success. <br />
+              exceptional worldwide crypto talent and accelerate success. <br />
               <br />© {getCurrentYear()} LUV NFT GIG. All rights reserved.
             </Text>
             <Stack direction={'row'} mb={6} spacing={6}>
