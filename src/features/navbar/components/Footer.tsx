@@ -1,52 +1,90 @@
 import {
   Box,
+  chakra,
   Container,
   Flex,
   Image,
   Link,
   Stack,
   Text,
+  VisuallyHidden,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 import { Superteams } from '@/constants/Superteam';
 import { getURL } from '@/utils/validUrl';
 
-const getCurrentYear = () => {
-  return new Date().getFullYear();
+// Define SocialButton component
+const SocialButton = ({
+  children,
+  label,
+  href,
+}: {
+  children: React.ReactNode;
+  label: string;
+  href: string;
+}) => {
+  return (
+    <chakra.button
+      bg={'blackAlpha.100'}
+      color="brand.slate.600"
+      rounded={'full'}
+      w={8}
+      h={8}
+      cursor={'pointer'}
+      as={'a'}
+      href={href}
+      display={'inline-flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
+      transition={'background 0.3s ease'}
+      _hover={{
+        bg: 'blackAlpha.500',
+      }}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <VisuallyHidden>{label}</VisuallyHidden>
+      {children}
+    </chakra.button>
+  );
 };
 
-const linkData = [
-  {
-    text: 'FAQ',
-    href: 'https://superteamdao.notion.site/Superteam-Earn-FAQ-aedaa039b25741b1861167d68aa880b1?pvs=4',
-  },
-  {
-    text: 'GitHub',
-    href: 'https://github.com/luvnft/earn',
-  },
-  {
-    text: 'Changelog',
-    href: 'https://superteamdao.notion.site/Superteam-Earn-Changelog-faf0c85972a742699ecc07a52b569827',
-  },
-];
-
-const superteamProductions = [
-  {
-    text: 'Build',
-    href: 'https://gig.luvnft.com',
-  },
-  {
-    text: 'Media',
-    href: 'https://arvrtise.substack.com/',
-  },
-  {
-    text: 'Podcast',
-    href: 'https://www.youtube.com/@luvnft',
-  },
-];
-
 export const Footer = () => {
+  const getCurrentYear = () => {
+    return new Date().getFullYear();
+  };
+
+  const linkData = [
+    {
+      text: 'FAQ',
+      href: 'https://superteamdao.notion.site/Superteam-Earn-FAQ-aedaa039b25741b1861167d68aa880b1?pvs=4',
+    },
+    {
+      text: 'GitHub',
+      href: 'https://github.com/luvnft/earn',
+    },
+    {
+      text: 'Changelog',
+      href: 'https://superteamdao.notion.site/Superteam-Earn-Changelog-faf0c85972a742699ecc07a52b569827',
+    },
+  ];
+
+  const superteamProductions = [
+    {
+      text: 'Build',
+      href: 'https://gig.luvnft.com',
+    },
+    {
+      text: 'Media',
+      href: 'https://arvrtise.substack.com/',
+    },
+    {
+      text: 'Podcast',
+      href: 'https://www.youtube.com/@luvnft',
+    },
+  ];
+
   return (
     <Box
       color={'brand.slate.500'}

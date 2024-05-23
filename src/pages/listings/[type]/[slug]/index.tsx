@@ -27,13 +27,12 @@ interface BountyDetailsProps {
 function BountyDetails({ bounty: initialBounty }: BountyDetailsProps) {
   const [, setBountySnackbar] = useAtom(bountySnackbarAtom);
 
-  const [bounty] = useState<typeof initialBounty>(initialBounty);
   const [submissionNumber, setSubmissionNumber] = useState<number>(0);
 
   const getSubmissionsCount = async () => {
     try {
       const submissionCountDetails = await axios.get(
-        `/api/submission/${bounty?.id}/count/`,
+        `/api/submission/${initialBounty?.id}/count/`,
       );
       setSubmissionNumber(submissionCountDetails?.data || 0);
     } catch (e) {
@@ -44,18 +43,18 @@ function BountyDetails({ bounty: initialBounty }: BountyDetailsProps) {
   useEffect(() => {
     const fetchSubmissions = async () => {
       await getSubmissionsCount();
-      if (bounty) {
+      if (initialBounty) {
         setBountySnackbar({
           submissionCount: submissionNumber,
-          deadline: bounty?.deadline,
-          rewardAmount: bounty?.rewardAmount,
-          type: bounty?.type,
-          isPublished: bounty?.isPublished,
+          deadline: initialBounty?.deadline,
+          rewardAmount: initialBounty?.rewardAmount,
+          type: initialBounty?.type,
+          isPublished: initialBounty?.isPublished,
         });
       }
     };
     fetchSubmissions();
-  }, [bounty, submissionNumber]);
+  }, [initialBounty, submissionNumber]);
 
   const encodedTitle = encodeURIComponent(initialBounty?.title || '');
 
@@ -70,8 +69,9 @@ function BountyDetails({ bounty: initialBounty }: BountyDetailsProps) {
             name="description"
             content={`${getListingTypeLabel(
               initialBounty?.type ?? 'Bounty',
-            )} on Superteam Earn | ${initialBounty?.sponsor
-              ?.name} is seeking freelancers and builders ${
+            )} on Superteam Earn | ${
+              initialBounty?.sponsor?.name
+            } is seeking freelancers and builders ${
               initialBounty?.title
                 ? `to work on ${initialBounty.title}`
                 : '| Apply Here'
@@ -79,7 +79,7 @@ function BountyDetails({ bounty: initialBounty }: BountyDetailsProps) {
           />
           <link
             rel="canonical"
-            href={`${getURL()}listings/${bounty?.type}/${bounty?.slug}/`}
+            href={`${getURL()}listings/${initialBounty?.type}/${initialBounty?.slug}/`}
           />
           <meta
             property="og:title"
@@ -87,9 +87,11 @@ function BountyDetails({ bounty: initialBounty }: BountyDetailsProps) {
           />
           <meta
             property="og:image"
-            content={`${getURL()}api/bounty-og/?title=${encodedTitle}&reward=${initialBounty?.rewardAmount}&token=${initialBounty?.token}&sponsor=${initialBounty
-              ?.sponsor?.name}&logo=${initialBounty?.sponsor
-              ?.logo}&type=${initialBounty?.type}&compensationType=${initialBounty?.compensationType}&minRewardAsk=${initialBounty?.minRewardAsk}&maxRewardAsk=${initialBounty?.maxRewardAsk}`}
+            content={`${getURL()}api/bounty-og/?title=${encodedTitle}&reward=${initialBounty?.rewardAmount}&token=${initialBounty?.token}&sponsor=${
+              initialBounty?.sponsor?.name
+            }&logo=${
+              initialBounty?.sponsor?.logo
+            }&type=${initialBounty?.type}&compensationType=${initialBounty?.compensationType}&minRewardAsk=${initialBounty?.minRewardAsk}&maxRewardAsk=${initialBounty?.maxRewardAsk}`}
           />
           <meta
             name="twitter:title"
@@ -97,9 +99,11 @@ function BountyDetails({ bounty: initialBounty }: BountyDetailsProps) {
           />
           <meta
             name="twitter:image"
-            content={`${getURL()}api/bounty-og/?title=${encodedTitle}&reward=${initialBounty?.rewardAmount}&token=${initialBounty?.token}&sponsor=${initialBounty
-              ?.sponsor?.name}&logo=${initialBounty?.sponsor
-              ?.logo}&type=${initialBounty?.type}&compensationType=${initialBounty?.compensationType}&minRewardAsk=${initialBounty?.minRewardAsk}&maxRewardAsk=${initialBounty?.maxRewardAsk}`}
+            content={`${getURL()}api/bounty-og/?title=${encodedTitle}&reward=${initialBounty?.rewardAmount}&token=${initialBounty?.token}&sponsor=${
+              initialBounty?.sponsor?.name
+            }&logo=${
+              initialBounty?.sponsor?.logo
+            }&type=${initialBounty?.type}&compensationType=${initialBounty?.compensationType}&minRewardAsk=${initialBounty?.minRewardAsk}&maxRewardAsk=${initialBounty?.maxRewardAsk}`}
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta property="og:image:width" content="1200" />
@@ -116,14 +120,16 @@ function BountyDetails({ bounty: initialBounty }: BountyDetailsProps) {
     >
       <Box>
         <>
-          {bounty === null && <ErrorSection />}
-          {bounty !== null && !bounty?.id && (
+          {initialBounty === null && <ErrorSection />}
+          {initialBounty !== null && !initialBounty?.id && (
             <ErrorSection message="Sorry! The bounty you are looking for is not available." />
           )}
-          {bounty !== null && !!bounty?.id && (
+          {initialBounty !== null && !!initialBounty?.id && (
             <>
-              <ListingHeader listing={bounty} />
-              {bounty?.isWinnersAnnounced && <ListingWinners bounty={bounty} />}
+              <ListingHeader listing={initialBounty} />
+              {initialBounty?.isWinnersAnnounced && (
+                <ListingWinners bounty={initialBounty} />
+              )}
               <HStack
                 align={['center', 'center', 'start', 'start']}
                 justify={['center', 'center', 'space-between', 'space-between']}
@@ -136,20 +142,20 @@ function BountyDetails({ bounty: initialBounty }: BountyDetailsProps) {
               >
                 <VStack gap={8} w={'full'} mt={{ base: 0, md: 10 }}>
                   <DescriptionUI
-                    skills={bounty?.skills?.map((e) => e.skills) ?? []}
-                    description={bounty?.description}
+                    skills={initialBounty?.skills?.map((e) => e.skills) ?? []}
+                    description={initialBounty?.description}
                   />
                   <Comments
-                    isAnnounced={bounty?.isWinnersAnnounced ?? false}
-                    listingSlug={bounty?.slug ?? ''}
-                    listingType={bounty?.type ?? ''}
-                    poc={bounty?.poc as User}
-                    sponsorId={bounty?.sponsorId}
-                    refId={bounty?.id ?? ''}
+                    isAnnounced={initialBounty?.isWinnersAnnounced ?? false}
+                    listingSlug={initialBounty?.slug ?? ''}
+                    listingType={initialBounty?.type ?? ''}
+                    poc={initialBounty?.poc as User}
+                    sponsorId={initialBounty?.sponsorId}
+                    refId={initialBounty?.id ?? ''}
                     refType="BOUNTY"
                   />
                 </VStack>
-                <RightSideBar listing={bounty} />
+                <RightSideBar listing={initialBounty} />
               </HStack>
             </>
           )}
