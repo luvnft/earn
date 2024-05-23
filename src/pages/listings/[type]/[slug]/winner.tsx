@@ -48,8 +48,9 @@ function WinnerBounty({
         name="description"
         content={`${getListingTypeLabel(
           initialBounty?.type ?? 'Bounty',
-        )} on Superteam Earn | ${initialBounty?.sponsor
-          ?.name} is seeking freelancers and builders ${
+        )} on Superteam Earn | ${
+          initialBounty?.sponsor?.name
+        } is seeking freelancers and builders ${
           initialBounty?.title
             ? `to work on ${initialBounty.title}`
             : '| Apply Here'
@@ -68,8 +69,8 @@ function WinnerBounty({
         name="twitter:title"
         content={`${initialBounty?.title || 'Bounty'} | Superteam Earn`}
       />
-      <meta name="twitter:site" content="https://earn.superteam.fun" />
-      <meta name="twitter:creator" content="@SuperteamEarn" />
+      <meta name="twitter:site" content="https://gig.luvnft.com" />
+      <meta name="twitter:creator" content="@LUVNFT" />
       <meta name="twitter:image" content={`${image.toString()}`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:image:width" content="1200" />
