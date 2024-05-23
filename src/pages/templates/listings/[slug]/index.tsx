@@ -42,7 +42,7 @@ function BountyDetails({ slug }: BountyDetailsProps) {
     <Default
       meta={
         <Meta
-          title={`${bounty?.title || 'Bounty'} | Superteam Earn`}
+          title={`${bounty?.title || 'Bounty'} | LUV NFT GIG`}
           description="Every crypto opportunity in one place!"
         />
       }

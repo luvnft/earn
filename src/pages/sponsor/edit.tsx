@@ -139,8 +139,8 @@ const UpdateSponsor = () => {
     <Default
       meta={
         <Meta
-          title="Edit Sponsor Profile | Superteam Earn"
-          description="Every Solana opportunity in one place!"
+          title="Edit Sponsor Profile | LUV NFT GIG"
+          description="Every Solana GIG opportunity in one place!"
         />
       }
     >

@@ -222,7 +222,7 @@ export const MobileNavbar = ({ onLoginOpen, onSearchOpen }: Props) => {
                 h={5}
                 cursor="pointer"
                 objectFit={'contain'}
-                alt={'Superteam Earn'}
+                alt={'LUV NFT GIG'}
                 src={'/assets/logo/logo.svg'}
               />
             </Link>

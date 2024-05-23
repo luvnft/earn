@@ -88,7 +88,7 @@ export function SearchModal({ isOpen, onClose }: Props) {
               fontSize={{ base: 'sm', md: 'md' }}
               border="none"
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search for Superteam Earn Listings"
+              placeholder="Search for LUV NFT GIG Listings"
               value={query}
               variant="filled"
             />

@@ -64,11 +64,11 @@ const Sponsor = () => {
     <>
       <Head>
         <title>
-          Find Top Talent for Your Crypto Projects on Superteam Earn
+          Find Top Talent for Your Crypto Projects on LUV NFT GIG
         </title>
         <meta
           name="description"
-          content="Seeking top talent for your crypto project? Superteam Earn connects you with experts for Bounties, Projects, and Grants in the crypto space."
+          content="Seeking top talent for your crypto project? LUV NFT GIG connects you with experts for Bounties, Projects, and Grants in the crypto space."
         />
       </Head>
 

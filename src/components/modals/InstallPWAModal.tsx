@@ -59,7 +59,7 @@ export const InstallPWAModal = ({
           >
             <HStack>
               <Icon as={MdOutlineInstallMobile} color={'brand.slate.500'} />
-              <Text fontSize={'lg'}>Install Earn</Text>
+              <Text fontSize={'lg'}>Install GIG</Text>
             </HStack>
           </ModalHeader>
           <ModalCloseButton mt={{ base: 2, md: 3 }} />
@@ -80,7 +80,7 @@ export const InstallPWAModal = ({
                     color="brand.slate.500"
                     textAlign={'center'}
                   >
-                    Add Earn to your homescreen and always stay updated.
+                    Add GIG to your homescreen and always stay updated.
                   </Text>
                 </Flex>
                 {isAutoInstallable() ? (

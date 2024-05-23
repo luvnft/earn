@@ -22,7 +22,7 @@ export function Introduction() {
         <Image alt="Medal" src={Medal} height={26} width={26} />
         <Text fontWeight={600}>Introducing Leaderboards</Text>
         <Text color="brand.slate.600">
-          Get Inspired: Check out Earn profiles of the leading contributors of
+          Get Inspired: Check out GIG profiles of the leading contributors of
           the Solana ecosystem!
         </Text>
       </VStack>

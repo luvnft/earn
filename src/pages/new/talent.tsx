@@ -276,9 +276,9 @@ export default function Talent() {
     <Default
       meta={
         <Meta
-          title="Create Your Profile to Access Bounties & Grants | Superteam Earn"
-          description="Become part of Superteam's talent network, where you can present your skills and collaborate on various crypto bounties, grants, and projects."
-          canonical="https://earn.superteam.fun/new/talent/"
+          title="Create Your Profile to Access Bounties & Grants | LUV NFT GIG"
+          description="Become part of GIG's talent network, where you can present your skills and collaborate on various crypto bounties, grants, and projects."
+          canonical="https://gig.luvnft.com/new/talent/"
         />
       }
     >

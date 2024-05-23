@@ -41,7 +41,7 @@ export const Login = ({ isOpen, onClose, isSponsor = false }: Props) => {
             textAlign={'center'}
           >
             {isSponsor
-              ? 'from joining Superteam Earn'
+              ? 'from joining LUV NFT GIG'
               : 'From earning in global standards'}
           </Text>
         </Box>

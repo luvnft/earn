@@ -47,7 +47,7 @@ export const FeatureModal = ({
           </Text>
           <Text mt={1} color="brand.slate.500" lineHeight={5}>
             Certain project listings will now allow users to send their
-            preferred compensation for the work to be completed. Earn will host
+            preferred compensation for the work to be completed. GIG will host
             a couple of such listings soon — look out for them!
           </Text>
         </ModalBody>

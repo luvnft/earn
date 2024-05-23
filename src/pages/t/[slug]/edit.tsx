@@ -395,8 +395,8 @@ export default function EditProfilePage({ slug }: { slug: string }) {
       <Default
         meta={
           <Meta
-            title="Superteam Earn"
-            description="Every Solana opportunity in one place!"
+            title="LUV NFT GIG"
+            description="Every Solana gig opportunity in one place!"
           />
         }
       >

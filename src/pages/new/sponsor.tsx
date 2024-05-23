@@ -83,9 +83,9 @@ const CreateSponsor = () => {
     <Default
       meta={
         <Meta
-          title="Create Sponsor | Superteam Earn"
-          description="Every Solana opportunity in one place!"
-          canonical="https://earn.superteam.fun/new/sponsor/"
+          title="Create Sponsor | LUV NFT GIG"
+          description="Every Solana gig opportunity in one place!"
+          canonical="https://gig.luvnft.com/new/sponsor/"
         />
       }
     >
@@ -117,7 +117,7 @@ const CreateSponsor = () => {
                 fontWeight={400}
                 textAlign={'center'}
               >
-                from joining Superteam Earn
+                from joining LUV NFT GIG
               </Text>
               <SignIn loginStep={loginStep} setLoginStep={setLoginStep} />
             </Box>

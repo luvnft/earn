@@ -546,7 +546,7 @@ export const ListingPayments = ({
               {!!debouncedRewardAmount &&
                 debouncedRewardAmount <= 100 &&
                 (token === 'USDT' || token === 'USDC') &&
-                "Note: This listing will not show up on Earn's Landing Page since it is ≤$100 in value. Increase the total compensation for better discoverability."}
+                "Note: This listing will not show up on GIG's Landing Page since it is ≤$100 in value. Increase the total compensation for better discoverability."}
             </Text>
             {isDraft && (
               <Button

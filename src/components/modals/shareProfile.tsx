@@ -38,8 +38,8 @@ export const ShareProfile = ({ isOpen, onClose, username, id }: Props) => {
 
   const shareMessage =
     id === userInfo?.id
-      ? 'Check out my profile on Superteam Earn!'
-      : 'Check out this profile on Superteam Earn!';
+      ? 'Check out my profile on LUV NFT GIG!'
+      : 'Check out this profile onLUV NFT GIG!';
 
   const socialPlatforms: SocialPlatform[] = [
     {

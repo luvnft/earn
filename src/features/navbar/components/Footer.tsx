@@ -105,21 +105,20 @@ export const Footer = () => {
                   color="brand.slate.500"
                   cursor="pointer"
                   objectFit={'contain'}
-                  alt={'Superteam Earn'}
+                  alt={'LUV NFT GIG'}
                   src={'/assets/logo/logo.svg'}
                 />
               </Link>
             </Box>
             <Text color="brand.slate.500" fontSize={{ base: 'sm', md: 'md' }}>
-              Superteam Earn is where crypto founders meet world-class talent.
-              Distribute your work to crypto-native talent, meet your next team
-              member & get things done fast. <br />
-              <br />© {getCurrentYear()} Superteam. All rights reserved.
+              LUV NFT GIG allows crypto friendly companies to onnect with exceptional
+              worldwide crypto talent and accelerate your project's success. <br />
+              <br />© {getCurrentYear()} LUV NFT GIG. All rights reserved.
             </Text>
             <Stack direction={'row'} mb={6} spacing={6}>
               <SocialButton
                 label={'Twitter'}
-                href="https://twitter.com/superteamearn"
+                href="https://twitter.com/luvnft"
               >
                 <svg
                   width="17"
@@ -136,7 +135,7 @@ export const Footer = () => {
               </SocialButton>
               <SocialButton
                 label={'Discord'}
-                href="https://discord.com/invite/Mq3ReaekgG"
+                href="https://nftv.luvnft.com"
               >
                 <svg
                   width="17"
@@ -178,7 +177,7 @@ export const Footer = () => {
                 fontWeight={'500'}
                 whiteSpace={'nowrap'}
               >
-                ALL SUPERTEAMS
+                ALL GIGGERS
               </Text>
               {Superteams.map((st) => (
                 <Link
@@ -216,7 +215,7 @@ export const Footer = () => {
                 fontWeight={'500'}
                 whiteSpace={'nowrap'}
               >
-                SUPERTEAM PRODUCTIONS
+                LUV NFT PRODUCTIONS
               </Text>
               {superteamProductions.map((link) => (
                 <Link

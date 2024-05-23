@@ -237,13 +237,13 @@ function TalentProfile({ slug }: TalentProps) {
           <Meta
             title={
               talent?.firstName && talent?.lastName
-                ? `Superteam Earn Talent: ${talent?.firstName} ${talent?.lastName}`
-                : 'Superteam Earn'
+                ? `LUV NFT GIG Talent: ${talent?.firstName} ${talent?.lastName}`
+                : 'LUV NFT GIG'
             }
             description={
               talent?.firstName && talent?.lastName
-                ? `${talent.firstName} ${talent.lastName} is on Superteam Earn. Become a part of our talent community to explore opportunities in the crypto space and work on bounties, grants, and projects.`
-                : 'Superteam Earn is a platform for developers, designers, and content marketers to work on real-world crypto projects. Explore opportunities by becoming part of our community.'
+                ? `${talent.firstName} ${talent.lastName} is on LUV NFT GIG. Become a part of our talent community to explore opportunities in the crypto space and work on bounties, grants, and projects.`
+                : 'LUV NFT GIG is a platform for developers, designers, and content marketers to work on real-world crypto projects. Explore opportunities by becoming part of our community.'
             }
           />
         }
@@ -319,7 +319,7 @@ function TalentProfile({ slug }: TalentProps) {
                           'Saw Your ST Earn Profile!',
                         );
                         const bcc = encodeURIComponent(
-                          'hello@superteamearn.com',
+                          'info@luvnft.com',
                         );
                         window.location.href = `mailto:${email}?subject=${subject}&bcc=${bcc}`;
                       })}
