@@ -58,7 +58,6 @@ async function handler(req: NextApiRequestWithUser, res: NextApiResponse) {
 
   // eslint-disable-next-line
   const {
-    role,
     skills,
     currentSponsorId,
     generateTalentEmailSettings,
