@@ -27,7 +27,9 @@ export const SponsorPrize = ({
           case 'range':
             return (
               <>
-                {`${formatNumberWithSuffix(minRewardAsk!)}-${formatNumberWithSuffix(maxRewardAsk!)}`}
+                {`${formatNumberWithSuffix(
+                  minRewardAsk!,
+                )}-${formatNumberWithSuffix(maxRewardAsk!)}`}
               </>
             );
           case 'variable':

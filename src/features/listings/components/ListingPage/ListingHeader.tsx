@@ -161,9 +161,8 @@ export function ListingHeader({
     statusTextColor = 'green.600';
   }
 
-  const displayValue = Superteams.find(
-    (st) => st.region === region,
-  )?.displayValue;
+  const displayValue = Superteams.find((st) => st.region === region)
+    ?.displayValue;
 
   const regionTooltipLabel = getRegionTooltipLabel(region);
 

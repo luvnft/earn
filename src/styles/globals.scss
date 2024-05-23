@@ -97,11 +97,11 @@ body {
 
 #reset-des pre {
   white-space: pre-wrap;
-  word-break: break-all; 
+  word-break: break-all;
 }
 
 #reset-des p {
-  white-space: pre-wrap; 
+  white-space: pre-wrap;
 }
 
 code {
@@ -141,8 +141,8 @@ pre {
   padding: 1rem 2rem;
 
   &::-moz-focus-inner {
-    border: "none";
-    outline: "none !important";
+    border: 'none';
+    outline: 'none !important';
   }
 }
 
@@ -221,7 +221,13 @@ pre {
 .banner-wrapper {
   width: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent 0, black 40px, black calc(100% - 40px), transparent 100%);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 40px,
+    black calc(100% - 40px),
+    transparent 100%
+  );
 }
 
 .banner-wrapper .wrapper {

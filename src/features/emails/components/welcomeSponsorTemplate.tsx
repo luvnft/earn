@@ -7,8 +7,8 @@ export const WelcomeSponsorTemplate = () => {
     <div style={styles.container}>
       <p style={styles.text}>Welcome to LUV NFT GIG!</p>
       <p style={styles.textWithMargin}>
-        Thank you for signing up. GIG is the premier talent-matching platform
-        in crypto, favored by hundreds of leading companies and thousands of
+        Thank you for signing up. GIG is the premier talent-matching platform in
+        crypto, favored by hundreds of leading companies and thousands of
         verified crypto-focused talent.
       </p>
       <p style={styles.textWithMargin}>

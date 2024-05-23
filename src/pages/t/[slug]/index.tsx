@@ -298,8 +298,8 @@ function TalentProfile({ slug }: TalentProps) {
                     {isMD
                       ? talent?.username
                       : talent?.username?.length && talent?.username.length > 24
-                        ? `${talent?.username.slice(0, 24)}...`
-                        : talent?.username}
+                      ? `${talent?.username.slice(0, 24)}...`
+                      : talent?.username}
                   </Text>
                 </Box>
                 <Flex
@@ -318,9 +318,7 @@ function TalentProfile({ slug }: TalentProps) {
                         const subject = encodeURIComponent(
                           'Saw Your ST Earn Profile!',
                         );
-                        const bcc = encodeURIComponent(
-                          'info@luvnft.com',
-                        );
+                        const bcc = encodeURIComponent('info@luvnft.com');
                         window.location.href = `mailto:${email}?subject=${subject}&bcc=${bcc}`;
                       })}
                   {renderButton(<ShareIcon />, 'Share', onOpen, true)}

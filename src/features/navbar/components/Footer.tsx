@@ -26,7 +26,7 @@ const linkData = [
   },
   {
     text: 'GitHub',
-    href: 'https://github.com/SuperteamDAO/earn',
+    href: 'https://github.com/luvnft/earn',
   },
   {
     text: 'Changelog',
@@ -37,15 +37,15 @@ const linkData = [
 const superteamProductions = [
   {
     text: 'Build',
-    href: 'https://build.superteam.fun',
+    href: 'https://gig.luvnft.com',
   },
   {
     text: 'Media',
-    href: 'https://superteam.substack.com/',
+    href: 'https://arvrtise.substack.com/',
   },
   {
     text: 'Podcast',
-    href: 'https://www.youtube.com/@superteampodcast',
+    href: 'https://www.youtube.com/@luvnft',
   },
 ];
 
@@ -111,15 +111,13 @@ export const Footer = () => {
               </Link>
             </Box>
             <Text color="brand.slate.500" fontSize={{ base: 'sm', md: 'md' }}>
-              LUV NFT GIG allows crypto friendly companies to onnect with exceptional
-              worldwide crypto talent and accelerate your project's success. <br />
+              LUV NFT GIG allows crypto friendly companies to connect with
+              exceptional worldwide crypto talent and accelerate your project's
+              success. <br />
               <br />© {getCurrentYear()} LUV NFT GIG. All rights reserved.
             </Text>
             <Stack direction={'row'} mb={6} spacing={6}>
-              <SocialButton
-                label={'Twitter'}
-                href="https://twitter.com/luvnft"
-              >
+              <SocialButton label={'Twitter'} href="https://twitter.com/luvnft">
                 <svg
                   width="17"
                   height="14"
@@ -133,10 +131,7 @@ export const Footer = () => {
                   />
                 </svg>
               </SocialButton>
-              <SocialButton
-                label={'Discord'}
-                href="https://nftv.luvnft.com"
-              >
+              <SocialButton label={'Discord'} href="https://nftv.luvnft.com">
                 <svg
                   width="17"
                   height="13"
@@ -152,7 +147,7 @@ export const Footer = () => {
               </SocialButton>
               <SocialButton
                 label={'Substack'}
-                href="https://superteam.substack.com/"
+                href="https://arvrtise.substack.com/"
               >
                 <svg
                   width="12"

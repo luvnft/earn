@@ -46,9 +46,10 @@ function WinnerBounty({
       } by ${initialBounty?.sponsor?.name}`}</title>
       <meta
         name="description"
-        content={`${getListingTypeLabel(initialBounty?.type ?? 'Bounty')} on Superteam Earn | ${
-          initialBounty?.sponsor?.name
-        } is seeking freelancers and builders ${
+        content={`${getListingTypeLabel(
+          initialBounty?.type ?? 'Bounty',
+        )} on Superteam Earn | ${initialBounty?.sponsor
+          ?.name} is seeking freelancers and builders ${
           initialBounty?.title
             ? `to work on ${initialBounty.title}`
             : '| Apply Here'

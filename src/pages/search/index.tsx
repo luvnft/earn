@@ -169,7 +169,9 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   try {
     const response = await fetch(
-      `${fullUrl}/api/search/${encodeURIComponent(queryTerm)}?${queryString}&limit=10`,
+      `${fullUrl}/api/search/${encodeURIComponent(
+        queryTerm,
+      )}?${queryString}&limit=10`,
     );
     const results = await response.json();
 

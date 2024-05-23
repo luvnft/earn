@@ -98,7 +98,9 @@ JOIN Sponsors s ON b.sponsorId = s.id
 WHERE (1=1) AND (
 b.isPublished = 1 AND
 b.isPrivate = 0 AND
-${combinedWhereClause} ${statusQuery.length > 0 ? ` AND ( ${statusQuery.join(' OR ')} )` : ''} 
+${combinedWhereClause} ${
+    statusQuery.length > 0 ? ` AND ( ${statusQuery.join(' OR ')} )` : ''
+  } 
 ) ${skills ? ` AND (${skillsQuery})` : ''}
 ) as subquery;
 `;
@@ -125,7 +127,9 @@ JOIN Sponsors s ON b.sponsorId = s.id
 WHERE (1=1) AND (
 b.isPublished = 1 AND
 b.isPrivate = 0 AND
-${combinedWhereClause} ${statusQuery.length > 0 ? ` AND ( ${statusQuery.join(' OR ')} )` : ''} 
+${combinedWhereClause} ${
+    statusQuery.length > 0 ? ` AND ( ${statusQuery.join(' OR ')} )` : ''
+  } 
 ) ${skills ? ` AND (${skillsQuery})` : ''}
 ORDER BY 
   CASE 

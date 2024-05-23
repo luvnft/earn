@@ -51,7 +51,7 @@ async function handler(req: NextApiRequestWithUser, res: NextApiResponse) {
   const userId = req.userId;
 
   // eslint-disable-next-line
-  const { email, publicKey, skills, role, Hackathon,...data } = req.body;
+  const { email, publicKey, skills, role, Hackathon, ...data } = req.body;
 
   const correctedSkills = correctSkills(skills);
 

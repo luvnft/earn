@@ -274,16 +274,16 @@ export function RightSideBar({ listing }: { listing: Bounty }) {
                       {isSubmissionNumberLoading
                         ? '...'
                         : !isProject
-                          ? submissionNumber.toLocaleString()
-                          : submissionRange}
+                        ? submissionNumber.toLocaleString()
+                        : submissionRange}
                     </Text>
                   </Flex>
                   <Text color={'#94A3B8'}>
                     {isProject
                       ? 'Applications'
                       : submissionNumber === 1
-                        ? 'Submission'
-                        : 'Submissions'}
+                      ? 'Submission'
+                      : 'Submissions'}
                   </Text>
                 </Flex>
 
@@ -520,7 +520,9 @@ export function RightSideBar({ listing }: { listing: Bounty }) {
               sublabel={
                 isWinnersAnnounced
                   ? 'Congratulations!'
-                  : `Around ${moment(deadline).add(8, 'd').format('Do MMM, YY')}`
+                  : `Around ${moment(deadline)
+                      .add(8, 'd')
+                      .format('Do MMM, YY')}`
               }
               label={'Winner Announced'}
             />
