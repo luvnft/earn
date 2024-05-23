@@ -350,7 +350,7 @@ export function RightSideBar({ listing }: { listing: Bounty }) {
         <VStack justify={'center'} gap={0} w={{ base: 'full', md: '22rem' }} bg={'#FFFFFF'} rounded={'xl'}>
           <VStack justify={'space-between'} w={'full'} borderBottom={'1px solid #E2E8EF'}>
             <TableContainer w={'full'}>
-            {compensationType !== 'fixed' && ( <Text mb={1} px={6} pt={3} color="brand.slate.400" fontSize={'xs'}
+            {compensationType !== 'fixed' && ( <Text mb={1} px={6} pt={3} color="#ffffff" fontSize={'xs'}
             fontWeight={500}> {compensationType === 'range' && 'Budget'} {compensationType === 'variable' && 'Payment in'} )}       
               <Table mt={compensationType === 'fixed' ? -6 : -10} variant={'unstyled'}>
                 <Thead>
